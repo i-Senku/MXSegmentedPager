@@ -243,6 +243,7 @@
 
 - (void)pageControlValueChanged:(HMSegmentedControl*)segmentedControl {
     [self.pager showPageAtIndex:segmentedControl.selectedSegmentIndex animated:YES];
+    [self changedToIndex:segmentedControl.selectedSegmentIndex];
 }
 
 #pragma mark <MXPagerViewDelegate>
@@ -253,7 +254,6 @@
 
 - (void)pagerView:(MXPagerView *)pagerView didMoveToPage:(UIView *)page atIndex:(NSInteger)index {
     [self.segmentedControl setSelectedSegmentIndex:index animated:NO];
-    [self changedToIndex:index];
 }
 
 - (void)pagerView:(MXPagerView *)pagerView willDisplayPage:(UIView *)page atIndex:(NSInteger)index {
