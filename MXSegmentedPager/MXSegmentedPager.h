@@ -110,6 +110,8 @@ typedef NS_ENUM(NSInteger, MXSegmentedControlPosition) {
  */
 - (void)segmentedPager:(MXSegmentedPager *)segmentedPager didScrollWithParallaxHeader:(MXParallaxHeader *)parallaxHeader;
 
+- (void)segmentedPager:(MXSegmentedPager *)segmentedPager didScrollWithParallaxHeader:(MXParallaxHeader *)parallaxHeader scrollView:(UIScrollView *)scrollView;
+
 /**
  Tells the delegate when dragging ended with the parallax header.
  

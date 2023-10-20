@@ -210,6 +210,7 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     if (scrollView == self.contentView && [self.delegate respondsToSelector:@selector(segmentedPager:didScrollWithParallaxHeader:)]) {
         [self.delegate segmentedPager:self didScrollWithParallaxHeader:scrollView.parallaxHeader];
+        [self.delegate segmentedPager:self didScrollWithParallaxHeader:scrollView.parallaxHeader scrollView:scrollView];
     }
 }
 
